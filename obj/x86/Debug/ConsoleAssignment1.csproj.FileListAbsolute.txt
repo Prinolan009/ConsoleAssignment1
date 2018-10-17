@@ -1,0 +1,4 @@
+C:\Users\prinolan\Desktop\Pretoria company\Programming questions\ConsoleAssignment1\bin\Debug\ConsoleAssignment1.exe
+C:\Users\prinolan\Desktop\Pretoria company\Programming questions\ConsoleAssignment1\bin\Debug\ConsoleAssignment1.pdb
+C:\Users\prinolan\Desktop\Pretoria company\Programming questions\ConsoleAssignment1\obj\x86\Debug\ConsoleAssignment1.exe
+C:\Users\prinolan\Desktop\Pretoria company\Programming questions\ConsoleAssignment1\obj\x86\Debug\ConsoleAssignment1.pdb
