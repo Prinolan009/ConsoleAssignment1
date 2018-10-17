@@ -11,16 +11,7 @@ namespace ConsoleAssignment1
         static void Main(string[] args)
         {
            
-            /*ArrayList arr= OddNums(SquaredNums(20));
-            for(int i=0;i<arr.Count;i++){
-            Console.WriteLine(arr[i]);
-            }
-            Console.ReadLine();*/
-            for (int i = 0; i < SquaredNums(20).Length; i++)
-            {
-                Console.WriteLine(SquaredNums(20)[i]);
-            }
-            Console.ReadLine();
+            
         }
 
         private static int[] SquaredNums(int MaxNumber) {
@@ -32,16 +23,74 @@ namespace ConsoleAssignment1
             return arr;
         }//ends method
 
+        //method used to get Odd numbers
         private static ArrayList OddNums(int [] arr) {
             ArrayList Odd=new ArrayList();
             for (int i = 0; i < arr.Length;i++)
             {
                 if(arr[i]%2==1){
                 Odd.Add(arr[i]);
-
                 }
             }
             return Odd;
+        }
+
+        //method used to get even numbers
+        private static ArrayList EvenNums(int[] arr)
+        {
+            ArrayList Even = new ArrayList();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] % 2 == 0)
+                {
+                    Even.Add(arr[i]);
+                }
+            }
+            return Even;
+        }
+
+        //void method for printing out 
+
+        public int AmountOfNumbers(ArrayList arr) {
+            int count = 0;
+            for (int i = 0; i < arr.Count;i++)
+            {
+                count++;
+            }
+            return count;
+        }//end amount of numbers
+
+        public int Total(ArrayList  arr) {
+            int sum = 0;
+            for (int i = 0; i < arr.Count; i++)
+            {
+                sum += (int)arr[i];
+            }
+            return sum;
+        }//ends total method
+
+        //average method
+        public double Average(ArrayList arr)
+        {
+            double avg = 0;
+            int sum = 0;
+            for (int i = 0; i < arr.Count;i++ )
+            {
+                sum += (int)arr[i];
+            }
+
+             avg=(sum/arr.Count);
+             return avg;
+        }//ends method
+
+        public int Minimum(ArrayList arr)
+        { 
+        
+        }
+
+        public int Maximum(ArrayList arr)
+        { 
+        
         }
     }
 }
