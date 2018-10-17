@@ -10,8 +10,45 @@ namespace ConsoleAssignment1
     {
         static void Main(string[] args)
         {
-           
+            printOutPut(20);
+        }
+
+        private static void printOutPut(int max) {
             
+            int[] arr;
+            ArrayList odd = new ArrayList();
+            ArrayList even = new ArrayList();
+
+            arr = SquaredNums(max);
+            odd = OddNums(arr);
+            even = EvenNums(arr);
+            Console.WriteLine("______Odd numbers______");
+            printNum(odd);
+            Console.WriteLine("______Even numbers______");
+            printNum(even);
+
+            Console.WriteLine("------------------------------------------------------------------");
+            Console.WriteLine("Amount of Numbers (Odd): " + AmountOfNumbers(odd) + " ");
+            Console.WriteLine("Amount of Numbers (Even): " + AmountOfNumbers(even) + " ");
+            Console.WriteLine("------------------------------------------------------------------");
+
+            Console.WriteLine("Total (Odd): " + Total(odd) + " ");
+            Console.WriteLine("Total (Even): " + Total(even) + " ");
+            Console.WriteLine("------------------------------------------------------------------");
+
+            Console.WriteLine("Total (Odd): " + Average(odd) + " ");
+            Console.WriteLine("Total (Even): " + Average(even) + " ");
+            Console.WriteLine("------------------------------------------------------------------");
+
+            Console.WriteLine("Minimum (Odd): " + Minimum(odd) + " ");
+            Console.WriteLine("Minimum (Even): " + Minimum(even) + " ");
+            Console.WriteLine("------------------------------------------------------------------");
+
+            Console.WriteLine("Maximum (Odd): " + Maximum(odd) + " ");
+            Console.WriteLine("Maximum (Even): " + Maximum(even) + " ");
+            Console.WriteLine("------------------------------------------------------------------");
+            
+            Console.ReadLine();
         }
 
         private static int[] SquaredNums(int MaxNumber) {
@@ -51,7 +88,7 @@ namespace ConsoleAssignment1
 
         //void method for printing out 
 
-        public int AmountOfNumbers(ArrayList arr) {
+        public static int AmountOfNumbers(ArrayList arr) {
             int count = 0;
             for (int i = 0; i < arr.Count;i++)
             {
@@ -60,7 +97,8 @@ namespace ConsoleAssignment1
             return count;
         }//end amount of numbers
 
-        public int Total(ArrayList  arr) {
+        public static int Total(ArrayList arr)
+        {
             int sum = 0;
             for (int i = 0; i < arr.Count; i++)
             {
@@ -70,7 +108,7 @@ namespace ConsoleAssignment1
         }//ends total method
 
         //average method
-        public double Average(ArrayList arr)
+        public static double Average(ArrayList arr)
         {
             double avg = 0;
             int sum = 0;
@@ -83,14 +121,50 @@ namespace ConsoleAssignment1
              return avg;
         }//ends method
 
-        public int Minimum(ArrayList arr)
-        { 
+        public static int Minimum(ArrayList arr)
+        {
+            int low = 0;
+            if(arr.Count>0){//ensures count is greater than o
+            low=(int)arr[0];//initialize lowest with first number in arrayList
+            for (int i = 0; i < arr.Count;i++ )
+                {
+                    if((int)arr[i]<low){
+                        low = (int)arr[i];//new lowest number
+                    }
+                }
+            
+            }
+            return low;
+        }//ends method
+
+        public static int Maximum(ArrayList arr)//method find highest number in arrayList
+        {
+            int high = 0;
+            if (arr.Count > 0)
+            {//ensures count is greater than o
+                high = (int)arr[0];//initialize lowest with first number in arrayList
+                for (int i = 0; i < arr.Count; i++)
+                {
+                    if ((int)arr[i] > high)
+                    {
+                        high = (int)arr[i];//new lowest number
+                    }
+                }
+
+            }
+            return high;
+        }//ends maximum method
+
+
+        //printing output
+        public static void printNum(ArrayList arr) {
+            //printing
+            for (int i = 0; i < arr.Count; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
         
         }
 
-        public int Maximum(ArrayList arr)
-        { 
-        
-        }
     }
 }
