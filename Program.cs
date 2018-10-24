@@ -10,17 +10,25 @@ namespace ConsoleAssignment1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Program for the first 20 square numbers");
+            
+
             printOutPut(20);//20 represents the first 20 squared numbers
         }
 
         private static void printOutPut(int max) {
-            
+            //method is used for general layout pertaining to the questions
             int[] arr;
             ArrayList odd = new ArrayList();
             ArrayList even = new ArrayList();
 
             arr = SquaredNums(max);
+
+            Console.WriteLine("The first 20 square numbers");
+            for (int i = 0; i < arr.Length;i++)
+            {
+                Console.Write(arr[i]+" , ");//prints first squared 20 numbers
+            }
+            Console.WriteLine("");
             odd = OddNums(arr);
             even = EvenNums(arr);
             Console.WriteLine("______Odd numbers______");
@@ -51,6 +59,8 @@ namespace ConsoleAssignment1
             
             Console.ReadLine();
         }
+
+       
 
         private static int[] SquaredNums(int MaxNumber) {
             int[] arr = new int[MaxNumber];
