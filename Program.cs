@@ -10,7 +10,8 @@ namespace ConsoleAssignment1
     {
         static void Main(string[] args)
         {
-            printOutPut(20);
+            Console.WriteLine("Program for the first 20 square numbers");
+            printOutPut(20);//20 represents the first 20 squared numbers
         }
 
         private static void printOutPut(int max) {
@@ -92,7 +93,7 @@ namespace ConsoleAssignment1
             int count = 0;
             for (int i = 0; i < arr.Count;i++)
             {
-                count++;
+                count++;//increments counter to find the amount wihtin the arrayList
             }
             return count;
         }//end amount of numbers
@@ -102,7 +103,7 @@ namespace ConsoleAssignment1
             int sum = 0;
             for (int i = 0; i < arr.Count; i++)
             {
-                sum += (int)arr[i];
+                sum += (int)arr[i];//adding to array
             }
             return sum;
         }//ends total method
@@ -114,7 +115,7 @@ namespace ConsoleAssignment1
             int sum = 0;
             for (int i = 0; i < arr.Count;i++ )
             {
-                sum += (int)arr[i];
+                sum += (int)arr[i];//sums the number
             }
 
              avg=(sum/arr.Count);
@@ -158,7 +159,7 @@ namespace ConsoleAssignment1
 
         //printing output
         public static void printNum(ArrayList arr) {
-            //printing
+            //printing numbers from arrayList
             for (int i = 0; i < arr.Count; i++)
             {
                 Console.WriteLine(arr[i]);
